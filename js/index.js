@@ -43,12 +43,17 @@ var caro = [
 	'Meque\ntrefe',
 	'Me-\ntido',
   'Ca\nnalla',
-	'Mí\nsero',
+	'Malo',
 	'Nazi',
   'Cí-\nnico',
-	'Chupa\nmedia',
-  'De-\nform',
- 
+	'chido',
+  'cholo',
+  'chili',
+  'lí-\nchigo',
+  'bo.\nleta',
+  'pichu\nrria',
+  'chim-\nba',
+  'lam\nbon',
 // Fascista	servil
 // Feudal	sirviente
 // Finoli	sordo
@@ -153,14 +158,15 @@ var caro = [
 // 'wide'
 ];
  var emoji = [
-   '🌲🌲🌲🌲🌲     🌲🌲🌲🌲🌲',
+   '🌲🌲🌲🌲🌲🌲     🌲🌲🌲🌲🌲🌲',
    '🌳🌳🌳🌳🌳     🌳🌳🌳🌳🌳',
    '🌴🌴🌴🌴🌴     🌴🌴🌴🌴🌴',
-   '👐🏻👐🏻👐🏻👐🏻👐🏻     👐🏻👐🏻👐🏻👐🏻👐🏻',
+  
    '☠️☠️☠️☠️☠️     ☠️☠️☠️☠️☠️',
    
  
  ]
+
 
 
 var getAdjective = function() {
@@ -169,12 +175,32 @@ var getAdjective = function() {
 var getNoun = function() {
   return emoji[Math.floor(Math.random() * emoji.length)];
 };
+// var getColor = function() {
+//   return color[Math.floor(Math.random() * color.length)];
+// };
 
-$('#theButton').click(function() {
-  $('.caro').text(getAdjective());
-  $('.emoji').text(getNoun());
-  
-});
+
+function getColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+  return color;
+}
+
+
+$(document).ready(function(){
+  $('#theButton').click(function() {
+    $('.caro').text(getAdjective());
+    $('.emoji').text(getNoun());
+    
+    $('body').css("background-color", getColor())
+    
+  });
+    })
+
+
 
 
 

@@ -10,7 +10,7 @@
       font-size: 8vw;
     }
      .date{
-      left: 0;
+      left: 6;
      }
      svg{
        position: static;
@@ -26,7 +26,10 @@
 
 
       }
-
+      .footer{
+        font-family: Arial;
+        font-size: 10px;
+      }
      }
 
     }
